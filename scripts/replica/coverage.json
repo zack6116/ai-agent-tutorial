@@ -1,0 +1,160 @@
+{
+  "sourceRoot": "/Users/zack/Downloads/它真的把Agent搭建讲得好清晰啊😭😭",
+  "pages": [
+    {
+      "slug": "01-understand",
+      "source": 2,
+      "group": "0. 学习路径",
+      "title": "从零开始搞懂 AI Agent",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "02-build",
+      "source": 3,
+      "group": "1. 从案例入门",
+      "title": "从0-1打造商用 AI Agent（智能体）",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "03-process",
+      "source": 4,
+      "group": "1. 从案例入门",
+      "title": "深度解析-构建 AI Agent全流程",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "04-coze-workflow",
+      "source": 5,
+      "group": "1. 从案例入门",
+      "title": "万字实践教程，全面入门 Coze 工作流",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "05-coze-app",
+      "source": 6,
+      "group": "2. 进阶Agent案例拆解",
+      "title": "Coze应用实战指南",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "06-customer-service",
+      "source": 7,
+      "group": "2. 进阶Agent案例拆解",
+      "title": "基于Agent的智能客服项目",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "07-architecture",
+      "source": 8,
+      "group": "3. 进阶知识篇",
+      "title": "万字详解：AI Agent 系统架构设计",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "08-patterns",
+      "source": 9,
+      "group": "3. 进阶知识篇",
+      "title": "Agent 的九种设计模式",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "09-sql-agent",
+      "source": 10,
+      "group": "2. 进阶Agent案例拆解",
+      "title": "SQL-Agent：实现SQL生成、翻译",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "10-finrobot",
+      "source": 11,
+      "group": "1. 从案例入门",
+      "title": "FinRobot：基于LLM的金融分析Agent",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "11-videos",
+      "source": 12,
+      "group": "6. 精选：AI Agents文章",
+      "title": "AI Agents视频与播客",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "12-articles",
+      "source": 13,
+      "group": "6. 精选：AI Agents文章",
+      "title": "精选：AI Agents文章",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "13-theory",
+      "source": 14,
+      "group": "4. 理论篇：AI Agents理论知识",
+      "title": "理论篇：AI Agents理论知识",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "14-rag-service",
+      "source": 15,
+      "group": "2. 进阶Agent案例拆解",
+      "title": "Agent智能客服，人工介入降低42%",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "15-voice",
+      "source": 16,
+      "group": "8. 项目：Agents项目",
+      "title": "项目实战(03)--Agent添加语音交互功能",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "17-frameworks",
+      "source": null,
+      "group": "3. 进阶知识篇",
+      "title": "框架：挑选合适的 Agent 实现方式",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "18-products",
+      "source": null,
+      "group": "7. 产品：Agents产品分析",
+      "title": "产品：Agents产品分析 · Lovart.ai",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "19-scenarios",
+      "source": null,
+      "group": "9. 应用：Agent全景图",
+      "title": "50个智能体应用场景",
+      "status": "synced-and-verified",
+      "verified": true
+    },
+    {
+      "slug": "20-projects",
+      "source": null,
+      "group": "8. 项目：Agents项目",
+      "title": "项目：Agents实战作品集 · Coze教程",
+      "status": "synced-and-verified",
+      "verified": true
+    }
+  ],
+  "evidence": "draft_ea4045db_folder/audit-report.json",
+  "scopeAndVisualReview": "scripts/replica/ACCEPTANCE.md",
+  "pending": []
+}

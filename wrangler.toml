@@ -1,0 +1,30 @@
+# Cloudflare Pages + Functions + D1 的项目配置。
+#
+# 用途有两个：
+#   1. 本地跑 `npx wrangler pages dev docs/.vitepress/dist` 验证登录/进度接口；
+#   2. 给 `npx wrangler d1 execute` 指定要操作哪个库。
+#
+# 线上部署时，D1 绑定也可以在 Cloudflare 控制台的 Pages 项目里配置，
+# 两种方式二选一即可，不要同时改来改去。
+#
+# 注意：不要改成账号里已有的 `coderfather-course-learning`。
+# 那个库属于另一个应用（users 表是 admin/student + enrolled 那套，已有真实数据），
+# 和这里「邮箱自助注册 + 进度记录」的表结构不兼容。本应用用自己的库。
+
+name = "ai-agent-tutorial"
+pages_build_output_dir = "docs/.vitepress/dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "coderfather-learn"
+database_id = "bc5473f9-ddd1-4b00-95d3-8d7e7cd70375"
+
+# 大资源桶（音频、海报）。functions/api/files.js 通过 env.BUCKET 读它 ——
+# 走绑定就不需要任何密钥，R2 的 API token 一概不用申请。
+#
+# 绑定名特意不叫 ASSETS：Pages Functions 里 env.ASSETS 是静态资源的内置处理器，
+# 同名会被平台占用。
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "coderfather-assets"

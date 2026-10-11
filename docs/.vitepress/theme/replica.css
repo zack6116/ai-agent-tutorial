@@ -1,0 +1,25 @@
+.replica-layout { --vp-sidebar-width: 280px; --vp-c-bg: #fff; }
+.replica-layout .VPDoc.has-aside .content-container { max-width: 840px; }
+.replica-layout .vp-doc h1 { font-size: 36px; line-height: 1.4; letter-spacing: -.6px; }
+.replica-layout .vp-doc h1 + p { color: #7b8089; font-size: 13px; margin: 18px 0 38px; }
+.replica-layout .vp-doc h2 { padding: 2px 8px; font-size: 25px; line-height: 1.55; margin: 38px 0 17px; }
+.replica-layout .vp-doc h3 { font-size: 20px; }
+.replica-layout .vp-doc .custom-block.danger { background: #fff0f2; border: 0; color: inherit; }
+.replica-layout .vp-doc .custom-block { line-height: 1.8; }
+.replica-layout .vp-doc .custom-block-title { color: #a77a26; font-size: 17px; }
+.replica-layout .vp-doc .mermaid { border-color: #eceef1; }
+.replica-layout .vp-doc .diagram-image { display:block; width:100%; margin:24px auto; border:1px solid #eceef1; border-radius:6px; }
+.reference-library { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin:24px 0; }
+.reference-card { border:1px solid #e0e2e7; border-radius:8px; overflow:hidden; background:#fff; box-shadow:0 2px 4px #00000008; }
+.reference-cover { min-height:165px; display:flex; align-items:center; justify-content:center; padding:22px; text-align:center; white-space:pre-line; font-size:26px; font-weight:750; line-height:1.35; color:#284466; background:#e7eff9; }
+.cover-1 { background:#efebf9; color:#604291; }.cover-2 { background:#ffecd7; color:#935c23; }.cover-3 { background:#e4f3e7; color:#367346; }.cover-4 { background:#f1e7ec; color:#7f4163; }.cover-5 { background:#e2f1ef; color:#31716a; }
+.reference-card-body { padding:20px; }
+.replica-layout .vp-doc .reference-card h3 { font-size:17px; line-height:1.65; margin:0 0 10px; }
+.replica-layout .vp-doc .reference-card p { font-size:14px; margin:10px 0; line-height:1.8; }
+.reference-author { color:#537093; }.reference-card a {font-size:14px}.reference-note {color:#777e89;font-size:12px!important}
+.reference-meta {display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:17px;font-size:12px;color:#777e89}
+.reference-meta span {padding:1px 8px;border-radius:10px;background:#edf3fc;color:#436893}
+.source-note {font-size:13px;color:#7a808a;border-top:1px solid #e9ebef;padding-top:18px;margin-top:42px}
+.replica-layout .vp-doc details img {max-height:none;width:100%}
+@media(max-width:760px){.reference-library{grid-template-columns:1fr}.replica-layout .vp-doc h1{font-size:29px}.replica-layout .vp-doc h2{font-size:22px}.reference-cover{min-height:145px}}
+.dark .replica-layout {--vp-c-bg:#1b1d22}.dark .reference-card{background:#24272f;border-color:#3b404a}.dark .reference-note{color:#aeb4c1}

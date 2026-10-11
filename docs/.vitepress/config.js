@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import replicaSidebar from './data/replica-sidebar.json'
 
 export default withMermaid(
   defineConfig({
-    title: "AI Agent 全栈开发与商业落地教程",
+    title: "AI 编程实战",
     description: "从 0 到 1 打造可交付、高可用的企业级智能体系统（商业交付版）",
     head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -37,44 +38,6 @@ export default withMermaid(
         .vp-doc .mermaid svg .label {
           line-height: 1.35 !important;
         }
-        /* 宣传海报推荐容器样式 */
-        .poster-recommend-card {
-          margin: 32px 0;
-          padding: 24px;
-          border-radius: 16px;
-          background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05));
-          border: 1px solid var(--vp-c-divider);
-          text-align: center;
-        }
-        .poster-recommend-card h3 {
-          margin-top: 0 !important;
-          margin-bottom: 8px !important;
-          font-size: 1.3rem;
-          font-weight: 700;
-          color: var(--vp-c-brand-1);
-        }
-        .poster-recommend-card p {
-          margin: 4px 0 16px 0 !important;
-          color: var(--vp-c-text-2);
-          font-size: 0.95rem;
-        }
-        .poster-image-wrapper {
-          display: flex;
-          justify-content: center;
-          margin-top: 16px;
-        }
-        .poster-image-wrapper img {
-          max-width: 680px;
-          width: 100%;
-          border-radius: 12px;
-          box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-          border: 1px solid var(--vp-c-divider);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .poster-image-wrapper img:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
-        }
       `]
     ],
     markdown: {
@@ -89,29 +52,58 @@ export default withMermaid(
       }
     },
     themeConfig: {
+      siteTitle: 'AI 编程实战',
       nav: [
-        { text: '首页', link: '/' },
-        { text: '教程正文', link: '/guide/01-mindset' },
-        { text: '附录速查', link: '/guide/09-appendix' }
+        { text: '学习地图', link: '/roadmap/' },
+        { text: '免费学习', link: '/learn/' },
+        { text: 'Agent 知识库', link: '/replica/' },
+        { text: '课程书柜', link: '/#courses' },
+        { text: '联系微信', link: '/contact' }
       ],
       sidebar: {
+        '/replica/': [
+          { text: 'AI Agent 搭建知识库', link: '/replica/' },
+          ...replicaSidebar,
+          { text: '配套全景图', link: '/replica/16-atlas' },
+          { text: '工程补充 · 九章教程', link: '/guide/01-mindset' }
+        ],
         '/guide/': [
           {
-            text: '系统章节大纲',
+            text: '从这里开始',
             items: [
-              { text: '第一章：心法与认知篇', link: '/guide/01-mindset' },
-              { text: '第二章：路线图篇 (14步全景)', link: '/guide/02-roadmap' },
-              { text: '第三章：架构与核心理论篇', link: '/guide/03-core-theory' },
-              { text: '第四章：关键技术底座篇', link: '/guide/04-tech-foundations' },
-              { text: '第五章：工业级混合 RAG 管道篇', link: '/guide/05-rag-pipeline' },
-              { text: '第六章：现代编排框架篇', link: '/guide/06-frameworks' },
-              { text: '第七章：企业商业实战案例篇', link: '/guide/07-enterprise-cases' },
-              { text: '第八章：生产高可用与求职面试篇', link: '/guide/08-production-career' },
-              { text: '附录：工程命令速查与术语表', link: '/guide/09-appendix' }
+              { text: '01  从零理解 Agent', link: '/guide/01-mindset' },
+              { text: '02  学习路线与第一个接口', link: '/guide/02-roadmap' }
+            ]
+          },
+          {
+            text: '理解原理 · 动手搭建',
+            items: [
+              { text: '03  规划、行动与记忆', link: '/guide/03-core-theory' },
+              { text: '04  让模型调用工具', link: '/guide/04-tech-foundations' },
+              { text: '05  搭建 RAG 知识库', link: '/guide/05-rag-pipeline' },
+              { text: '06  工作流与框架选型', link: '/guide/06-frameworks' }
+            ]
+          },
+          {
+            text: '案例实践 · 工程交付',
+            items: [
+              { text: '07  三个业务案例拆解', link: '/guide/07-enterprise-cases' },
+              { text: '08  评测、上线与作品集', link: '/guide/08-production-career' },
+              { text: '09  命令与术语速查', link: '/guide/09-appendix' },
+              { text: '手绘知识卡 · 换一种读法', link: '/courses/ai-agent' }
             ]
           }
         ]
       },
+      outline: { level: [2, 3], label: '本页目录' },
+      docFooter: { prev: '上一章', next: '下一章' },
+      returnToTopLabel: '回到顶部',
+      sidebarMenuLabel: '课程目录',
+      darkModeSwitchLabel: '切换阅读主题',
+      search: { provider: 'local', options: { locales: { root: { translations: {
+        button: { buttonText: '搜索文档', buttonAriaLabel: '搜索学习文档' },
+        modal: { noResultsText: '没有找到相关内容', resetButtonTitle: '清空搜索', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } }
+      } } } } },
       socialLinks: [
         { icon: 'github', link: 'https://github.com/zackzhangkai/ai-agent-tutorial' }
       ],

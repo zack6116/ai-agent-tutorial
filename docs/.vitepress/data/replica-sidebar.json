@@ -1,0 +1,132 @@
+[
+  {
+    "text": "0. 学习路径",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "从零开始搞懂 AI Agent",
+        "link": "/replica/01-understand"
+      }
+    ]
+  },
+  {
+    "text": "1. 从案例入门",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "从0-1打造商用 AI Agent（智能体）",
+        "link": "/replica/02-build"
+      },
+      {
+        "text": "深度解析-构建 AI Agent全流程",
+        "link": "/replica/03-process"
+      },
+      {
+        "text": "万字实践教程，全面入门 Coze 工作流",
+        "link": "/replica/04-coze-workflow"
+      },
+      {
+        "text": "FinRobot：基于LLM的金融分析Agent",
+        "link": "/replica/10-finrobot"
+      }
+    ]
+  },
+  {
+    "text": "2. 进阶Agent案例拆解",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Coze应用实战指南",
+        "link": "/replica/05-coze-app"
+      },
+      {
+        "text": "基于Agent的智能客服项目",
+        "link": "/replica/06-customer-service"
+      },
+      {
+        "text": "SQL-Agent：实现SQL生成、翻译",
+        "link": "/replica/09-sql-agent"
+      },
+      {
+        "text": "Agent智能客服，人工介入降低42%",
+        "link": "/replica/14-rag-service"
+      }
+    ]
+  },
+  {
+    "text": "3. 进阶知识篇",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "万字详解：AI Agent 系统架构设计",
+        "link": "/replica/07-architecture"
+      },
+      {
+        "text": "Agent 的九种设计模式",
+        "link": "/replica/08-patterns"
+      },
+      {
+        "text": "框架：挑选合适的 Agent 实现方式",
+        "link": "/replica/17-frameworks"
+      }
+    ]
+  },
+  {
+    "text": "4. 理论篇：AI Agents理论知识",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "理论篇：AI Agents理论知识",
+        "link": "/replica/13-theory"
+      }
+    ]
+  },
+  {
+    "text": "6. 精选：AI Agents文章",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "AI Agents视频与播客",
+        "link": "/replica/11-videos"
+      },
+      {
+        "text": "精选：AI Agents文章",
+        "link": "/replica/12-articles"
+      }
+    ]
+  },
+  {
+    "text": "7. 产品：Agents产品分析",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "产品：Agents产品分析 · Lovart.ai",
+        "link": "/replica/18-products"
+      }
+    ]
+  },
+  {
+    "text": "8. 项目：Agents项目",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "项目实战(03)--Agent添加语音交互功能",
+        "link": "/replica/15-voice"
+      },
+      {
+        "text": "项目：Agents实战作品集 · Coze教程",
+        "link": "/replica/20-projects"
+      }
+    ]
+  },
+  {
+    "text": "9. 应用：Agent全景图",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "50个智能体应用场景",
+        "link": "/replica/19-scenarios"
+      }
+    ]
+  }
+]

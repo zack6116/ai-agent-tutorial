@@ -1,0 +1,13 @@
+flowchart TB
+ subgraph T[工具与检索层]
+ A[网页搜索] --- B[向量数据库] --- C[知识库]
+ D[业务数据与API] --- E[SaaS平台] --- F[业务逻辑与用户交互]
+ end
+ subgraph O[行动与编排层]
+ G[Agent应用] --- H[持久记忆]
+ end
+ subgraph R[推理层]
+ I[大语言模型 LLM]
+ end
+ T <--> O
+ O <--> R

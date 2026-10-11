@@ -5,3 +5,20 @@ node_modules/
 .venv/
 __pycache__/
 *.pyc
+
+# 本地密钥。线上走 Pages 的加密环境变量，不进仓库。
+# （当前大资源走 R2 绑定、不需要密钥，但本地调试难免会用上，先挡住。）
+.dev.vars
+.env
+.env.*
+
+# wrangler 本地状态（--local 的 D1 数据、运行时日志），只属于这台机器
+.wrangler/
+# VitePress 构建缓存
+docs/.vitepress/cache/
+# VitePress 构建产物：每次部署前重新生成，不进版本库（之前误提交了 112 个文件）
+docs/.vitepress/dist/
+
+# 本地工具缓存与临时草稿，不属于源码
+.headroom/
+draft_*_folder/

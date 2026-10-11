@@ -1,0 +1,184 @@
+/* 学习地图与免费学习区。
+   这两块用的是「地图」语言（暖白底 + 靛蓝主色），与讲解型文档的
+   绿色系刻意区分开，但保持同一套排版节奏。 */
+
+.learning-layout {
+  --vp-c-brand-1: #4c5fd5;
+  --vp-c-brand-2: #5f70dd;
+  --vp-c-brand-3: #4c5fd5;
+  --vp-c-brand-soft: #eceffc;
+  --rm-brand: #4c5fd5;
+  --rm-brand-strong: #3d4eb8;
+  --rm-brand-soft: #e9ecfb; /* 品牌色的浅底：勾选框、徽标 */
+  --rm-brand-tint: #eceffc; /* 品牌色的悬停底 */
+  --rm-code: #3b4bb0;
+  --rm-ink: #1f2937;
+  --rm-muted: #596579;
+  --rm-faint: #8b94a6;
+  --rm-line: #e7eaf0;
+  --rm-surface: #ffffff;
+  --rm-soft: #f6f7fb;
+  --rm-page: #f7f6f3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--rm-page);
+}
+
+/* 暗色不只换主色：底色、卡面、分隔线整套都要换，否则深色导航栏下会顶着一片亮底。 */
+.dark .learning-layout {
+  --vp-c-brand-1: #a1afff;
+  --vp-c-brand-2: #b3bfff;
+  --vp-c-brand-3: #a1afff;
+  --vp-c-brand-soft: #2b3357;
+  --rm-brand: #a1afff;
+  --rm-brand-strong: #b9c4ff;
+  --rm-brand-soft: #2b3357;
+  --rm-brand-tint: #232838;
+  --rm-code: #c3cbff;
+  --rm-ink: #e8eaf0;
+  --rm-muted: #a3abbd;
+  --rm-faint: #79839a;
+  --rm-line: #2c313d;
+  --rm-surface: #1b1f28;
+  --rm-soft: #222732;
+  --rm-page: #14171d;
+}
+
+/* 暗色下需要单独调的几个面。
+   注意：这些不能写进组件的 <style scoped> 里 —— Vue 会把
+   `:global(.dark) .rm-x` 编译成一个光秃秃的 `.dark`，选择器直接失效。 */
+.dark .learning-layout .rm-layer-tag {
+  background: #2b3357;
+}
+
+.dark .learning-layout .rm-primary {
+  color: #10131c;
+}
+
+.dark .learning-layout .rm-progress,
+.dark .learning-layout .rm-card:hover {
+  border-color: #3d424f;
+}
+
+/* 地图页面自己控制版心，去掉 VPPage 的额外内边距。 */
+.learning-layout .VPPage {
+  padding: 0;
+}
+
+.learning-layout .VPContent {
+  padding-bottom: 0;
+}
+
+/* 学习区里仍会有少量正文（课时页），沿用文档排版但换成靛蓝强调色。 */
+.learning-layout .vp-doc {
+  font-size: 16px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.learning-layout .vp-doc h2 {
+  margin: 40px 0 18px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--rm-line);
+  font-size: 21px;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+
+.learning-layout .vp-doc h2 .header-anchor {
+  top: 2px;
+}
+
+.learning-layout .vp-doc h3 {
+  margin: 28px 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.learning-layout .vp-doc p {
+  margin: 14px 0;
+}
+
+.learning-layout .vp-doc ul,
+.learning-layout .vp-doc ol {
+  padding-left: 22px;
+}
+
+.learning-layout .vp-doc li + li {
+  margin-top: 6px;
+}
+
+.learning-layout .vp-doc li::marker {
+  color: var(--rm-brand);
+}
+
+.learning-layout .vp-doc strong {
+  font-weight: 650;
+}
+
+.learning-layout .vp-doc a {
+  color: var(--rm-brand);
+  text-underline-offset: 4px;
+}
+
+.learning-layout .vp-doc :not(pre) > code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--rm-soft);
+  color: #3b4bb0;
+  font-size: 0.9em;
+}
+
+.learning-layout .vp-doc div[class*='language-'] {
+  border-radius: 10px;
+  border: 1px solid var(--rm-line);
+  font-size: 13.5px;
+}
+
+.learning-layout .vp-doc .custom-block {
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--rm-line);
+  background: var(--rm-surface);
+  font-size: 15px;
+}
+
+.learning-layout .vp-doc .custom-block.tip {
+  background: #eef0fd;
+  border-color: #dfe3fa;
+}
+
+.learning-layout .vp-doc .custom-block-title {
+  font-size: 14px;
+  font-weight: 620;
+}
+
+.learning-layout .vp-doc .custom-block.tip .custom-block-title {
+  color: var(--rm-brand);
+}
+
+.learning-layout .vp-doc table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.learning-layout .vp-doc th {
+  background: var(--rm-soft);
+  text-align: left;
+}
+
+.dark .learning-layout .vp-doc :not(pre) > code {
+  color: #b9c3ff;
+}
+
+.dark .learning-layout .vp-doc .custom-block.tip {
+  background: #262b47;
+  border-color: #343c63;
+}
+
+@media (max-width: 767px) {
+  .learning-layout .vp-doc h2 {
+    font-size: 19px;
+  }
+}

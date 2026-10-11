@@ -1,0 +1,11 @@
+flowchart LR
+ A[用户问题] --> B[检索]
+ C[DDL和Schema] --> B
+ D[说明文档与正确SQL] --> B
+ B --> E[Prompt]
+ E --> F[LLM生成SQL]
+ F --> G[校验与只读执行]
+ G --> H[表格与图表]
+ H --> I{结果正确?}
+ I -->|否| J[修订查询] --> F
+ I -->|审核确认| D

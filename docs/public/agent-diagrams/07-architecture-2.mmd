@@ -1,0 +1,11 @@
+sequenceDiagram
+ participant App as Agent应用
+ participant LLM as 模型
+ participant Tool as 工具
+ App->>LLM: 目标、状态、可用工具
+ LLM-->>App: 下一步行动请求
+ App->>App: 参数和权限验证
+ App->>Tool: 执行函数
+ Tool-->>App: 函数结果或错误
+ App->>LLM: 更新任务状态
+ LLM-->>App: 下一步或最终结果
