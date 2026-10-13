@@ -6,6 +6,36 @@ export default withMermaid(
   defineConfig({
     title: "AI 编程实战",
     description: "从 0 到 1 打造可交付、高可用的企业级智能体系统（商业交付版）",
+    transformPageData(pageData) {
+      // 线上经 coderfather-router 以 /ai/ 前缀提供服务，canonical/og:url 用带前缀的正式域名
+      const canonicalUrl = `https://coderfather.com/ai/${pageData.relativePath.replace(/(^|\/)index\.md$/, '').replace(/\.md$/, '/')}`
+      const home = pageData.relativePath === 'index.md'
+      const url = home ? 'https://coderfather.com/ai/' : canonicalUrl
+      const title = pageData.title || pageData.frontmatter?.title || 'AI 编程实战'
+      const desc = pageData.description || pageData.frontmatter?.description || '从 0 到 1 打造可交付、高可用的企业级智能体系统（商业交付版）'
+      pageData.frontmatter.head = [
+        ...(pageData.frontmatter.head || []),
+        ['link', { rel: 'canonical', href: url }],
+        ['meta', { property: 'og:type', content: 'article' }],
+        ['meta', { property: 'og:site_name', content: 'AI 编程实战' }],
+        ['meta', { property: 'og:title', content: title }],
+        ['meta', { property: 'og:description', content: desc }],
+        ['meta', { property: 'og:url', content: url }],
+        ['meta', { property: 'og:image', content: 'https://coderfather.com/og.png' }],
+        ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+        ['script', { type: 'application/ld+json' }, JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'TechArticle',
+          headline: title.slice(0, 110),
+          description: desc,
+          url,
+          inLanguage: 'zh-CN',
+          author: { '@type': 'Person', name: 'Zack' },
+          publisher: { '@type': 'Organization', name: 'CoderFather', url: 'https://coderfather.com/' },
+          isAccessibleForFree: true,
+        })],
+      ]
+    },
     head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }],
       ['style', {}, `
@@ -105,7 +135,7 @@ export default withMermaid(
         modal: { noResultsText: '没有找到相关内容', resetButtonTitle: '清空搜索', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } }
       } } } } },
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/zackzhangkai/ai-agent-tutorial' }
+        { icon: 'github', link: 'https://github.com/zack6116/ai-agent-tutorial' }
       ],
       footer: {
         message: '商业实战出版级教程 | 严禁未授权翻印传播',
